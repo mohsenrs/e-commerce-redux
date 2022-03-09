@@ -1,0 +1,19 @@
+.product_listing {
+  margin: 3rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+
+  @media screen and (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem;
+  }
+
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
+}

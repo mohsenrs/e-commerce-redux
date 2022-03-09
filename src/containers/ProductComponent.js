@@ -1,12 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import classes from './ProductComponent.module.scss'
 
 function ProductComponent() {
   const products = useSelector((state) => state.allProducts.products)
 
   const renderList = products.map((product) => (
-    <div className='' style={{ height: '100%' }} key={product.id}>
+    <div
+      className={classes.product}
+      key={product.id}
+    >
       <Link to={`/product/${product.id}`}>
         <div className='ui link cards'>
           <div className='card'>

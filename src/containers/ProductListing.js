@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import ProductComponent from './ProductComponent'
 import { setProducts } from './../redux/actions/productActions'
+import classes from './ProductListing.module.scss'
 
 function ProductListing() {
   const dispatch = useDispatch()
@@ -19,13 +20,7 @@ function ProductListing() {
   }, [])
 
   return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4,1fr)',
-        gridGap: '30px',
-      }}
-    >
+    <div className={classes.product_listing}>
       <ProductComponent />
     </div>
   )
